@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* App base styles */
+:root {
+  --app-font-size: 1rem;
+}
+
+html {
+  font-size: var(--app-font-size);
+}
+
+body {
+  @apply bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-border-opacity: 1;
+}
+
+/* Utility for glassy cards */
+.glass {
+  @apply bg-white/80 dark:bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:bg-white/60 border border-slate-200/60 dark:border-slate-800/60 shadow-lg rounded-2xl;
+}
+
+/* Polished navbar */
+.nav-link {
+  @apply px-3 py-2 rounded-md text-sm font-medium transition-colors text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800;
+}
+.nav-link-active {
+  @apply bg-indigo-600 text-white shadow-sm;
+}
